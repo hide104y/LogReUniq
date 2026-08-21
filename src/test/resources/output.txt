@@ -1,0 +1,3 @@
+sales-server1,192.0.2.35,sales.us.example.com
+sales-server2,192.0.2.36,sales.us.example.com
+sales-server3,192.0.2.37,sales.us.example.com

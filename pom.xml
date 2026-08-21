@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <url>http://maven.apache.org</url>
+
+  <!-- package -->
+  <groupId>tool</groupId>
+
+  <!-- アプリ名 -->
+  <artifactId>LogReUniq</artifactId>
+  <name>LogReUniq</name>
+
+  <!-- バージョン -->
+  <version>1.0</version>
+
+  <!-- パッケージファイル形式 -->
+  <packaging>jar</packaging>
+
+  <properties>
+    <!-- ソースファイルの文字コード -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- カスタム変数 -->
+    <jvmver>1.8</jvmver>
+    <jrever>jre8</jrever>
+    <!-- JAVAバージョン -->
+    <java.version>${jvmver}</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+  </properties>
+
+  <!-- パッケージ化の設定 -->
+  <build>
+    <finalName>${project.artifactId}-${project.version}-${jrever}</finalName>
+    <plugins>
+      <!-- マニフェスト設定 -->
+      <!-- 不要：maven-shade-plugin側で設定
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>tool.${project.artifactId}</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      -->
+      <!-- 依存ライブラリ同梱化 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.2</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>${project.groupId}.${project.artifactId}</mainClass>
+                </transformer>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+              </transformers>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- 依存ライブラリ -->
+  <dependencies>
+
+    <!-- 単体テスト -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+</project>
