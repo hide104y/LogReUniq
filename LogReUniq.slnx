@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LogReUniq/LogReUniq.csproj" />
+  <Project Path="TestProject1/TestProject1.csproj" />
+</Solution>
