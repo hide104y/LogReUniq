@@ -1,0 +1,13 @@
+14-MAY-2012 15:28:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server2)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.35)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 15:29:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server1)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.36)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 15:29:58 * (CONNECT_DATA=(CID=(program=)(HOST=sales-server1)(user=jdoe))) * (ADDRESS=(protocol=tcp)(SERVICE_NAME=sales.us.example.com)(HOST=192.0.2.36)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 15:30:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server3)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.37)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 15:31:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server1)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.36)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 15:31:58 * (CONNECT_DATA=(CID=(program=)(HOST=sales-server1)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.36)(port=41349))(SERVICE_NAME=sales.us.example.com) * establish * sales.us.example.com * 0
+14-MAY-2012 15:32:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server2)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.35)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 16:32:58 * (CONNECT_DATA=(SERV_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server2)(user=jdoe))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.35)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 16:33:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server2)(user=grid1))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.35)(port=41349)) * establish * sales.us.example.com * 0
+14-MAY-2012 16:34:58 * (CONNECT_DATA=(SERVICE_NAME=sales.us.example.com)(CID=(program=)(HOST=sales-server2)(user=grid2))) * (ADDRESS=(protocol=tcp)(HOST=192.0.2.35)(port=41349)) * establish * sales.us.example.com * 0
+
+
+
