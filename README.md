@@ -24,7 +24,7 @@ gh repo list | Select-String LogReUniq
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\LogReUniq)){rmdir .\LogReUniq}
+if (Test-Path -Path .\LogReUniq){rm -Recurse -Force .\LogReUniq}
 # クローン実行
 git clone https://github.com/hide104y/LogReUniq.git
 ```
@@ -156,7 +156,7 @@ dotnet publish .\LogReUniq\LogReUniq\LogReUniq.csproj -c Release -o D:\Github\bi
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\LogReUniq)){rmdir .\LogReUniq}
+if (Test-Path -Path .\LogReUniq){rm -Recurse -Force .\LogReUniq}
 # クローン実行
 git clone -b dotnet10 https://github.com/hide104y/LogReUniq.git
 ```
