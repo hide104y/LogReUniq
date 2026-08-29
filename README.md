@@ -79,11 +79,14 @@ mvn -version
 
 ## MAVENプロジェクトの作成
 ```shell
+# CD
+cd ${base_dir}\${solution}
+# 作成
 mvn archetype:generate `
 -DarchetypeArtifactId=maven-archetype-quickstart `
 -DinteractiveMode=false `
--DgroupId=${groupid} `
--DartifactId=${solution}
+-DgroupId="${groupid}" `
+-DartifactId="${solution}"
 ```
 
 ## 手動ビルドが必要な依存ライブラリー
